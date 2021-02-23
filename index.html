@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segitség</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="topnav">
+            <a href="#sec1">Főoldal</a>
+            <a href="#sec2">Szolgáltaások</a>
+            <a href="">Kapcsolat</a>
+            <a href="#story">Sztori</a>
+        </div>
+        <img src="kepek/terd.jpg" alt="" id="kep1">
+    </header>
+  
+    <section id="sec1">
+        <hr>
+        <div>
+            <br>
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <br><br><br><br><br><br><br><br>
+                    <div class="text">
+                        <p class="szoveg">"Ez a fiu birja egesz nap megy mint a robot el nem lehet fárasztani!"<br><span
+                                class="nenik">-Szepesi Mária-</span></p>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <br><br><br><br><br><br><br><br>
+                    <div class="text">
+                        <p class="szoveg">"Nem lehet kifogni rajta! Akár egy gép! Csak ajánlani tudom!"<br><span
+                                class="nenik">-Czeglédi Ilonka-</span></p>
+                    </div>
+                </div>
+                <div class="mySlides fade">
+                    <br><br><br><br><br><br><br><br>
+                    <div class="text">
+                        <p class="szoveg">"Ez egy testépítő nem bírni vele!"<br><span class="nenik">-Keverő Klára-</span></p>
+                    </div>
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <br>
+        </div>
+        <hr>
+    </section>
+ 
+
+    <section id="sec2">
+        <h1 id="bekezdes1">
+            Ezekben lehetek a segítségedre!
+        </h1>
+        <div id="kepek">
+            <div class="kepline">
+                <img src="kepek/takaritas.jpg" alt="" class="kep responsive">
+                <h2>Takatítok de nem lopok!
+                    Értékei nem kerülnek idegen kezekbe!
+                </h2>
+                <p>Manapság egyre többen élnek vissza a hasonló szolgáltaásokkal különösen az idősek vonatkozásábban. Ön
+                    ne kerüljön ilyen helyzetbe!</p>
+            </div>
+
+            <div class="kepline">
+                <img src="kepek/bevasarlas.png" alt="" class="kep responsive">
+                <h2>Bevásárolok! A <em>hátam</em> bírja akár 50kg lisztet felviszek az emeletre is!
+                </h2>
+                <p>Elvégzem ön helyett a nagybevásárlást is így önnek csak a sorozatát kell néznie és házhoz megy minden
+                    földi jó!</p>
+
+            </div>
+
+            <div class="kepline">
+                <img src="kepek/fozes.jpg" alt="" class="kep responsive">
+                <h2>Megéhezett? Akkor ismét nem jár rosz helyen!</h2>
+
+                <p>Személyre szabott akár diétás étrendet is biztosítani tudok önnek! 8 év tapasztalta az ön ételébe is
+                    belekerülhet!</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1 id="bekezdes1">Válassz engem s jutalmad lészen az életedben!</h1>
+    </section>
+    <section id="sec4">
+        <br>
+        <h1>Sztori</h1>
+        <div class="w3-row-padding">
+            <div id="jobbra" class="w3-third">
+                <img src="kepek/help.png" alt="" id="help">
+            </div>
+            <div id="story" class="w3-third">
+                <p>Miért segítek? Kiskoromban mamámékkal nőttem fel és a kapcsolatom idősebb koromban sem szünt meg
+                    velük sajnos azonban az idő nagy úr és mindenkin kifog. <br><br>
+                    Természetesen láttam hogy min mennek kereszül éppen ezért döntöttem úgy hogy az ő segítésük mellet
+                    más idős emberek életét is megpróbálom könnyebbé tenni!
+                    Elősször csak a szük ismerettségi körömben segítettem de később úgy döntöttem hogy fő állásban
+                    szeretném csinálni az ön nagy szerencséjére! :)
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <br><br>
+        <ul>
+            <li>Kapcsolat</li>
+            <li>Tel</li>
+            <li>Email</li>
+
+        </ul>
+
+    </footer>
+
+</body>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 4000); // Change image every 2 seconds
+    }
+</script>
+
+</html>
